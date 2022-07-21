@@ -1,0 +1,14 @@
+provider "aws" {
+    access_key  = "AKIA5OYON5USYIOKOAFT"
+    secret_key  = "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"
+    region      = "ap-south-1"
+}
+
+resource "aws_s3_bucket" "b" {
+  bucket = "chakrydevops-s3-1"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
